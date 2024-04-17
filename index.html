@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+//    let n2 =1;
+//    // document.write( n1+ " " + n2 +" ")
+//    for (let i = 0; i < 18; i++) {
+//
+//        let next = n1 + n2;
+//        n1 = n2;
+//        n2 = next;
+//        if(next%5 ===0){
+//            document.write( next + " ");
+//            break
+//        }
+//
+//    }
+function printHeart() {
+    const size = 10; // Đây là kích thước của trái tim, có thể tùy chỉnh cho lớn hơn hoặc nhỏ hơn
+    let heart = "";
+
+    // Phần trên của trái tim
+    for (let i = size/2; i <= size; i+=2) {
+        for (let j = 1; j < size-i; j+=2) {
+            heart += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            heart += "*";
+        }
+        for (let j = 1; j <= size-i; j++) {
+            heart += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            heart += "*";
+        }
+        heart += "\n";
+    }
+
+    // Phần dưới của trái tim
+    for (let i = size; i >= 0; i--) {
+        for (let j = i; j < size; j++) {
+            heart += " ";
+        }
+        for (let j = 1; j < (i*2)-1; j++) {
+            heart += "*";
+        }
+        heart += "\n";
+    }
+
+    console.log(heart);
+}
+
+printHeart(); // Gọi hàm để in trái tim
+</script>
+</body>
+</html>
